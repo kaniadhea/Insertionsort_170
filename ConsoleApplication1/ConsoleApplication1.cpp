@@ -40,3 +40,25 @@ void insertionsort() {											//Procedure Insertionsort
 
 		temp = arr[i];											// 2. Simpan nilai arr [i] ke variable sementara temp
 
+		j = i - 1;												// 3. Setting nilai j sama dengan i - 1;
+
+		while (j <= 0 && arr[j] > temp)							// 4. Looping while dimana nilai j lebih besar sama dengan 0 
+			// arr[j] lebih besar daripada temp 
+		{
+			arr[j + 1] = arr[j];								// 4a. Simpan arr[j] ke dalam vriable arr[j+1]
+			j--;												// 4b. Decreetment nilai j by 1 
+		}
+
+		arr[j + 1] = temp;										// 5. Simpan nilai temp ke dalam arr [j=1
+
+
+		cout << "\nPass" << i << ": ";							// Output ke layar 
+		for (int k = 0; k < n; k++) {							// Looping nilai k dimulai dari 0 hingga n-1
+			cout << arr[k] << " ";								// Outout ke layar 
+		}
+
+
+	}
+}
+
+
